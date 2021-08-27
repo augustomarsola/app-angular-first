@@ -1,0 +1,55 @@
+<div class="container main-container">
+  <h3>Interpolation</h3>
+
+  <!-- <p>O número de cliques é {{ contadorClique }}</p> -->
+  <p [ngClass]="{
+    'text-secondary':contadorClique < 3,
+    'text-success':contadorClique >= 3,
+    'text-warning':contadorClique >= 6,
+    'text-danger':contadorClique >= 9
+  }">O número de cliques é {{ contadorClique }}</p>
+
+  <br>
+  <br>
+
+  <h3>Property Binding</h3>
+
+  <button class="btn btn-info" [disabled]="contadorClique >= 10">Info</button> (será desabilitado ao chegar no numéro 10 de cliques) <!-- Caso o contador clique seja maior que 10 o botão é desabilitado -->
+  <br>
+  <img [src]="urlImage" height="50px" width="50px">
+
+  <br>
+  <br>
+
+  <h3>Event Binding</h3>
+
+  <button class="btn btn-warning" (click)="adicionarClique()">Adicionar Clique</button>
+  <br>
+  <br>
+  <button class="btn btn-danger" (click)="zerarCliques()" [disabled]="contadorClique < 10">Zerar Cliques</button> (será habilitado ao chegar no numéro 10 de cliques)
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h3>Two-way Binding</h3>
+
+  <!-- <strong>Sem utilizar two-way binding</strong>
+  <input type="text" (keyup)='KeyUp($event)' placeholder="Digite seu nome" class="form-control">
+  <label>Seu nome é: {{ nome }}</label>
+
+  <br>
+  <br>
+
+  <strong>Utilizando two-way binding (Escrita Longa)</strong>
+  <input type="text" [ngModel]="nome" (ngModelChange)='nome = $event' placeholder="Digite Seu Nome" class="form-control">
+  <label>Seu nome é: {{ nome }}</label>
+
+  <br> -->
+  <br>
+
+  <strong>Utilizando two-way binding (Escrita Adequada)</strong>
+  <input type="text" [(ngModel)]="nome" placeholder="Escreva a classe do campo (bootstrap)" class="form-control">
+  <label [ngClass]="nome">Nome da classe: {{ nome }}</label>
+</div>
