@@ -12,6 +12,7 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes'; //Configuração da navegação
 import { APP_BASE_HREF } from '@angular/common';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+import { ProdutoService } from './produtos/produtos.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
     FormsModule
   ],
   providers: [
+    ProdutoService,
     { provide: APP_BASE_HREF, useValue: '/' } //Indentificação de navegação
   ],
   bootstrap: [AppComponent]
