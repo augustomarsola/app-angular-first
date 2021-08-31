@@ -6,7 +6,7 @@ import { HomeComponent } from "./navegacao/home/home.component";
 import { ListaProdutoComponent } from "./produtos/lista-produto/lista-produto.component";
 
 export const rootRouterConfig: Routes = [
-  { path: '', redirectTo: '/home', pathMatch:'full' }, //Redirencionar para a home, utilizando o noem por completo
+  { path: '', redirectTo: '/home', pathMatch:'full' }, //Redirencionar para a home, utilizando o nome por completo
   { path: 'home', component: HomeComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'sobre', component: SobreComponent },
